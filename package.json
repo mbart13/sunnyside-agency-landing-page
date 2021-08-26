@@ -1,0 +1,28 @@
+{
+  "name": "sunnyside-agency-landing-page-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rm -rf dist && parcel src/index.html",
+    "build": "rm -rf dist && parcel build src/index.html"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.3.6",
+    "sass": "^1.38.1"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "ie >= 9"
+        ]
+      }
+    }
+  }
+}
