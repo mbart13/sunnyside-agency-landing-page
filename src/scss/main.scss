@@ -7,6 +7,12 @@ header {
   justify-content: space-between;
   position: relative;
   z-index: 1;
+
+  @include screen(tablet) {
+    max-width: 84.5rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 0;
+  }
 }
 
 .logo {
@@ -36,6 +42,40 @@ header {
 
 .nav-links {
   display: none;
+  margin: 0;
+  font-weight: 600;
+
+  @include screen(tablet) {
+    display: flex;
+    & > * + * {
+      margin-left: 2.9375rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  li:last-child a {
+    color: $color-desaturated-blue;
+    font-size: 15px;
+    font-family: $ff-fraunces;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    background-color: $color-yellow;
+    border-radius: 5rem;
+    transition: all 0.2s linear;
+
+    @include screen(tablet) {
+      background-color: $color-white;
+
+      &:hover {
+        background-color: rgba($color-white, 25%);
+        color: $color-white;
+      }
+    }
+  }
 }
 
 .hero {
@@ -75,6 +115,10 @@ header {
 
     img {
       display: inline;
+    }
+
+    @include screen(tablet) {
+      margin: 6rem auto 0;
     }
   }
 }
