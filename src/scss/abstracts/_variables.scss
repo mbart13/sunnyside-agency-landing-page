@@ -12,6 +12,7 @@ $color-grayish-blue: hsl(213, 9%, 39%); // testimonials text
 $color-white: hsl(0, 0%, 100%);
 
 $breakpoints-up: (
+  "small": "22rem",
   "tablet": "42.25rem",
   "desktop": "68rem",
 );
