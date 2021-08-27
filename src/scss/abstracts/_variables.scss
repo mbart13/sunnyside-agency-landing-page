@@ -11,7 +11,11 @@ $color-gray: hsl(210, 4%, 67%); // testimonials heading
 $color-grayish-blue: hsl(213, 9%, 39%); // testimonials text
 $color-white: hsl(0, 0%, 100%);
 
+$ff-barlow: "Barlow", sans-serif;
+$ff-fraunces: "Fraunces", serif;
+
 $breakpoints-up: (
+  "small": "22rem",
   "tablet": "42.25rem",
   "desktop": "68rem",
 );
