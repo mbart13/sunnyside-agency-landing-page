@@ -3,6 +3,18 @@
 body {
   font-family: $ff-barlow;
   font-size: 1.125rem;
+  background-color: $color-bg;
+}
+
+a:focus,
+button:focus {
+  outline: 2px dashed currentColor;
+  outline-offset: 0.2rem;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .sr-only {

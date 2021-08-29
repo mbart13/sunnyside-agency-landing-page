@@ -41,8 +41,12 @@ picture {
   display: block;
 }
 
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
 ul {
-  list-style-type: none;
   padding: 0;
 }
 

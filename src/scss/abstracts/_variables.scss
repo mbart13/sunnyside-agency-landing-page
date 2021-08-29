@@ -1,9 +1,10 @@
 $color-soft-red: hsl(7, 99%, 70%);
 $color-yellow: hsl(51, 100%, 49%);
+$color-blue: hsl(200, 100%, 62%);
 $color-bg: hsl(39,100%,99%);
 $color-desaturated-blue: hsl(212, 27%, 19%); // contact link, headings, learn more
 $color-dark-cyan: hsl(167, 40%, 24%); // graphic design header
-$color-blue: hsl(198, 62%, 26%); // photography text
+$color-dark-blue: hsl(198, 62%, 26%); // photography text
 $color-footer-bg: hsl(168, 44%, 70%);
 $color-footer-text: hsl(168, 34%, 41%);
 $color-text: hsl(232, 10%, 55%);
@@ -15,7 +16,7 @@ $ff-barlow: "Barlow", sans-serif;
 $ff-fraunces: "Fraunces", serif;
 
 $breakpoints-up: (
-  "small": "22rem",
-  "tablet": "42.25rem",
+  "small": "22.5rem",
+  "tablet": "50.25rem",
   "desktop": "68rem",
 );
