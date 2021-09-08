@@ -3,7 +3,7 @@ const burgerBtn = document.querySelector(
 );
 const nav = document.querySelector(".navbar");
 
-burgerBtn.addEventListener("click", () => {
+const toggleMenu = () => {
   nav.classList.toggle("menu-active");
   if (nav.classList.contains("menu-active")) {
     burgerBtn.setAttribute("aria-label", "Close Menu");
@@ -12,4 +12,6 @@ burgerBtn.addEventListener("click", () => {
     burgerBtn.setAttribute("aria-label", "Open Menu");
     burgerBtn.setAttribute("aria-expanded", false);
   }
-});
+};
+
+burgerBtn.addEventListener("click", toggleMenu);

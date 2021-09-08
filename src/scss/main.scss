@@ -56,7 +56,7 @@ header {
   color: $color-text;
   text-align: center;
   padding: 2.2rem 0;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   z-index: 1;
   transition: opacity 0.3s ease-in-out;
   & > * + * {
@@ -93,6 +93,7 @@ header {
     background-color: transparent;
     color: $color-white;
     padding: 0;
+    margin: 0;
 
     & > * + * {
       margin-left: 2.9375rem;
@@ -110,10 +111,10 @@ header {
     font-size: 15px;
     font-family: $ff-fraunces;
     text-transform: uppercase;
-    padding: 1rem 2rem;
     background-color: $color-yellow;
     border-radius: 5rem;
     display: inline-block;
+    transition: color 0.2s linear, background-color 0.2s linear;
 
     @include screen(tablet) {
       background-color: $color-white;
@@ -122,6 +123,11 @@ header {
         background-color: rgba($color-white, 25%);
         color: $color-white;
       }
+    }
+
+    & a {
+      display: inline-block;
+      padding: 1rem 2rem;
     }
   }
 }
@@ -158,12 +164,247 @@ header {
     animation: arrow-float 1.5s infinite alternate ease-in-out;
 
     img {
-      display: inline;
+      // display: inline;
     }
   }
 }
 
-.about-section {
+.features {
   @include screen(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "transform-text transform-img"
+      "stand-out-img stand-out-text"
+      "graphic-design photography";
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.feature {
+  padding: 4rem 1.5rem;
+  text-align: center;
+
+  @include screen(tablet) {
+    place-self: center;
+    text-align: left;
+    padding: 0 1.5rem;
+  }
+
+  &__title {
+    color: $color-desaturated-blue;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    max-width: 16ch;
+    margin: 0 auto 1.5rem;
+
+    @include screen(tablet) {
+      margin: 0 0 1.5rem;
+    }
+
+    @include screen(desktop) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__text {
+    color: $color-text;
+    font-size: 1.125rem;
+    line-height: 1.66;
+    margin-bottom: 2rem;
+    max-width: 50ch;
+    margin: 0 auto 2rem;
+  }
+
+  &__cta {
+    color: $color-desaturated-blue;
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    font-family: $ff-fraunces;
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 1px;
+    padding: 0 0.5rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.625rem;
+      border-radius: 1.75rem;
+      top: 0.75rem;
+      left: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      width: 100%;
+    }
+
+    &::after {
+      width: 0;
+      transition: width 0.1s linear;
+    }
+  }
+}
+
+@include screen(tablet) {
+  .transform-img {
+    grid-area: transform-img;
+  }
+
+  .transform-text {
+    grid-area: transform-text;
+  }
+
+  .stand-out-img {
+    grid-area: stand-out-img;
+  }
+
+  .stand-out-text {
+    grid-area: stand-out-text;
+  }
+
+  .graphic-design {
+    grid-area: graphic-design;
+  }
+
+  .photography {
+    grid-area: photography;
+  }
+}
+
+.service-card {
+  text-align: center;
+  padding: 24.875rem 1.5rem 3.6875rem;
+
+  &__title {
+    font-size: 1.75rem;
+    margin-bottom: 1.6875rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    max-width: 37ch;
+    margin: 0 auto;
+  }
+}
+
+.service-card:nth-of-type(odd) {
+  background: url("../assets/images/mobile/image-graphic-design.jpg")
+    center/cover no-repeat;
+  color: $color-dark-cyan;
+
+  @include screen(tablet) {
+    grid-area: graphic-design;
+    background: url("../assets/images/desktop/image-graphic-design.jpg")
+      center/cover no-repeat;
+  }
+}
+
+.service-card:nth-of-type(even) {
+  background: url("../assets/images/mobile/image-photography.jpg") center/cover
+    no-repeat;
+  color: $color-dark-blue;
+
+  @include screen(tablet) {
+    grid-area: photography;
+    background: url("../assets/images/desktop/image-photography.jpg")
+      center/cover no-repeat;
+  }
+}
+
+.feature__cta--red::before {
+  background-color: rgba($color-soft-red, 0.25);
+}
+
+.feature__cta--yellow::before {
+  background-color: rgba($color-yellow, 0.25);
+}
+
+.feature__cta--red:hover::after {
+  background-color: $color-soft-red;
+}
+
+.feature__cta--yellow:hover::after {
+  background-color: $color-yellow;
+}
+
+.feature__cta--red:hover::after,
+.feature__cta--yellow:hover::after {
+  width: 100%;
+}
+
+.testimonials__header {
+  margin: 4rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  color: $color-gray;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include screen(tablet) {
+    font-size: 1.25rem;
+    margin: 10rem 0 5rem;
+  }
+}
+
+.testimonials {
+  padding: 0 1.5rem;
+
+  & > * + * {
+    margin-top: 4rem;
+  }
+
+  @include screen(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 4rem;
+
+    & > * + * {
+      margin-top: 0;
+    }
+  }
+
+  @include screen(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial {
+  text-align: center;
+
+  &__image {
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+  &__caption {
+    font-size: 1.125rem;
+    line-height: 1.77;
+    color: $color-grayish-blue;
+    margin-bottom: 2rem;
+    max-width: 35ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__name {
+    color: $color-desaturated-blue;
+    font-size: 1.125rem;
+  }
+
+  &__role {
+    font-size: 0.875rem;
+    color: $color-gray;
   }
 }

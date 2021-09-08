@@ -1,5 +1,9 @@
 @use '../abstracts/variables' as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $ff-barlow;
   font-size: 1.125rem;

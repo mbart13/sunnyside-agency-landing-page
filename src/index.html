@@ -61,21 +61,119 @@
     <main>
       <section class="hero">
         <h1 class="hero__banner">We are creatives</h1>
-        <a href="/" class="hero__scroll-link">
+        <a href="#features" class="hero__scroll-link">
           <img
             src="./assets/images/icon-arrow-down.svg"
             alt="scroll down arrow"
           />
         </a>
       </section>
-      <!-- <section class="about-section">
-        <div>
+      <section class="features" id="features">
+        <h2 class="sr-only">Features</h2>
+        <picture class="transform-img">
+          <source
+            srcset="./assets/images/desktop/image-transform.jpg"
+            media="(min-width: 50.25rem)"
+          />
           <img src="./assets/images/mobile/image-transform.jpg" alt="" />
+        </picture>
+        <div class="feature transform-text">
+          <h3 class="feature__title">Transform your brand</h3>
+          <p class="feature__text">
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <a href="/" class="feature__cta feature__cta--yellow">Learn more</a>
         </div>
-        <div>
+        <picture class="stand-out-img">
+          <source
+            srcset="./assets/images/desktop/image-stand-out.jpg"
+            media="(min-width: 50.25rem)"
+          />
           <img src="./assets/images/mobile/image-stand-out.jpg" alt="" />
+        </picture>
+        <div class="feature stand-out-text">
+          <h3 class="feature__title">Stand out to the right audience</h3>
+          <p class="feature__text">
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <a href="/" class="feature__cta feature__cta--red">Learn more</a>
         </div>
-      </section> -->
+        <div class="service-card">
+          <h3 class="service-card__title">Graphic design</h3>
+          <p class="service-card__text">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3 class="service-card__title">Photography</h3>
+          <p class="service-card__text">
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="testimonials__header">Client Testimonials</h2>
+        <div class="testimonials">
+          <figure class="testimonial">
+            <img
+              class="testimonial__image"
+              src="./assets/images/image-emily.jpg"
+              alt=""
+            />
+            <figcaption>
+              <blockquote class="testimonial__caption">
+                We put our trust in Sunnyside and they delivered, making sure
+                our needs were met and deadlines were always hit.
+              </blockquote>
+              <div>
+                <h3 class="testimonial__name">Emily R.</h3>
+                <small class="testimonial__role">Marketing Director</small>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <img
+              class="testimonial__image"
+              src="./assets/images/image-thomas.jpg"
+              alt=""
+            />
+            <figcaption>
+              <blockquote class="testimonial__caption">
+                Sunnyside’s enthusiasm coupled with their keen interest in our
+                brand’s success made it a satisfying and enjoyable experience.
+              </blockquote>
+              <div>
+                <h3 class="testimonial__name">Thomas S.</h3>
+                <small class="testimonial__role">Chief Operating Officer</small>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <img
+              class="testimonial__image"
+              src="./assets/images/image-jennie.jpg"
+              alt=""
+            />
+            <figcaption>
+              <blockquote class="testimonial__caption">
+                Incredible end result! Our sales increased over 400% when we
+                worked with Sunnyside. Highly recommended!
+              </blockquote>
+              <div>
+                <h3 class="testimonial__name">Jennie F.</h3>
+                <small class="testimonial__role">Business Owner</small>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
     </main>
   </body>
 </html>
